@@ -9,9 +9,10 @@
 		}
 
 		
-		private function setParams($statment, $parameters){
+		private function setParams($statment, $parameters = array()){
 			foreach($parameters as $key => $value) {
-				$this->setParam->bindParam($key , $value);
+
+				$this->setParam($statment, $key , $value);
 			}
 		}
 
